@@ -1,0 +1,223 @@
+
+/* 우리 그냥 노토산스만 쓰면안될까 */
+/* noto-sans-kr-100 - latin */
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Noto Sans KR Thin'), local('NotoSansKR-Thin'),
+       url('fonts/notosansKR/noto-sans-kr-v12-latin-100.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('fonts/notosansKR/noto-sans-kr-v12-latin-100.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* noto-sans-kr-300 - latin */
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Noto Sans KR Light'), local('NotoSansKR-Light'),
+       url('fonts/notosansKR/noto-sans-kr-v12-latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('fonts/notosansKR/noto-sans-kr-v12-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* noto-sans-kr-regular - latin */
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Noto Sans KR Regular'), local('NotoSansKR-Regular'),
+       url('fonts/notosansKR/noto-sans-kr-v12-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('fonts/notosansKR/noto-sans-kr-v12-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* noto-sans-kr-500 - latin */
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Noto Sans KR Medium'), local('NotoSansKR-Medium'),
+       url('fonts/notosansKR/noto-sans-kr-v12-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('fonts/notosansKR/noto-sans-kr-v12-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* noto-sans-kr-700 - latin */
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Noto Sans KR Bold'), local('NotoSansKR-Bold'),
+       url('fonts/notosansKR/noto-sans-kr-v12-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('fonts/notosansKR/noto-sans-kr-v12-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* noto-sans-kr-900 - latin */
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Noto Sans KR Black'), local('NotoSansKR-Black'),
+       url('fonts/notosansKR/noto-sans-kr-v12-latin-900.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('fonts/notosansKR/noto-sans-kr-v12-latin-900.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+
+
+
+
+/* prompt-100 - latin */
+@font-face {
+  font-family: 'Prompt';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Prompt Thin'), local('Prompt-Thin'),
+       url('fonts/prompt/prompt-v4-latin-100.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('fonts/prompt/prompt-v4-latin-100.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* prompt-100italic - latin */
+@font-face {
+  font-family: 'Prompt';
+  font-style: italic;
+  font-weight: 100;
+  src: local('Prompt Thin Italic'), local('Prompt-ThinItalic'),
+       url('fonts/prompt/prompt-v4-latin-100italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('fonts/prompt/prompt-v4-latin-100italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* prompt-200 - latin */
+@font-face {
+  font-family: 'Prompt';
+  font-style: normal;
+  font-weight: 200;
+  src: local('Prompt ExtraLight'), local('Prompt-ExtraLight'),
+       url('fonts/prompt/prompt-v4-latin-200.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('fonts/prompt/prompt-v4-latin-200.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* prompt-200italic - latin */
+@font-face {
+  font-family: 'Prompt';
+  font-style: italic;
+  font-weight: 200;
+  src: local('Prompt ExtraLight Italic'), local('Prompt-ExtraLightItalic'),
+       url('fonts/prompt/prompt-v4-latin-200italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('fonts/prompt/prompt-v4-latin-200italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* prompt-300 - latin */
+@font-face {
+  font-family: 'Prompt';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Prompt Light'), local('Prompt-Light'),
+       url('fonts/prompt/prompt-v4-latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('fonts/prompt/prompt-v4-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* prompt-300italic - latin */
+@font-face {
+  font-family: 'Prompt';
+  font-style: italic;
+  font-weight: 300;
+  src: local('Prompt Light Italic'), local('Prompt-LightItalic'),
+       url('fonts/prompt/prompt-v4-latin-300italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('fonts/prompt/prompt-v4-latin-300italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* prompt-regular - latin */
+@font-face {
+  font-family: 'Prompt';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Prompt'), local('Prompt-Regular'),
+       url('fonts/prompt/prompt-v4-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('fonts/prompt/prompt-v4-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* prompt-italic - latin */
+@font-face {
+  font-family: 'Prompt';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Prompt Italic'), local('Prompt-Italic'),
+       url('fonts/prompt/prompt-v4-latin-italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('fonts/prompt/prompt-v4-latin-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* prompt-500 - latin */
+@font-face {
+  font-family: 'Prompt';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Prompt Medium'), local('Prompt-Medium'),
+       url('fonts/prompt/prompt-v4-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('fonts/prompt/prompt-v4-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* prompt-500italic - latin */
+@font-face {
+  font-family: 'Prompt';
+  font-style: italic;
+  font-weight: 500;
+  src: local('Prompt Medium Italic'), local('Prompt-MediumItalic'),
+       url('fonts/prompt/prompt-v4-latin-500italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('fonts/prompt/prompt-v4-latin-500italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* prompt-600 - latin */
+@font-face {
+  font-family: 'Prompt';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Prompt SemiBold'), local('Prompt-SemiBold'),
+       url('fonts/prompt/prompt-v4-latin-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('fonts/prompt/prompt-v4-latin-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* prompt-600italic - latin */
+@font-face {
+  font-family: 'Prompt';
+  font-style: italic;
+  font-weight: 600;
+  src: local('Prompt SemiBold Italic'), local('Prompt-SemiBoldItalic'),
+       url('fonts/prompt/prompt-v4-latin-600italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('fonts/prompt/prompt-v4-latin-600italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* prompt-700 - latin */
+@font-face {
+  font-family: 'Prompt';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Prompt Bold'), local('Prompt-Bold'),
+       url('fonts/prompt/prompt-v4-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('fonts/prompt/prompt-v4-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* prompt-700italic - latin */
+@font-face {
+  font-family: 'Prompt';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Prompt Bold Italic'), local('Prompt-BoldItalic'),
+       url('fonts/prompt/prompt-v4-latin-700italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('fonts/prompt/prompt-v4-latin-700italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* prompt-800 - latin */
+@font-face {
+  font-family: 'Prompt';
+  font-style: normal;
+  font-weight: 800;
+  src: local('Prompt ExtraBold'), local('Prompt-ExtraBold'),
+       url('fonts/prompt/prompt-v4-latin-800.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('fonts/prompt/prompt-v4-latin-800.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* prompt-800italic - latin */
+@font-face {
+  font-family: 'Prompt';
+  font-style: italic;
+  font-weight: 800;
+  src: local('Prompt ExtraBold Italic'), local('Prompt-ExtraBoldItalic'),
+       url('fonts/prompt/prompt-v4-latin-800italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('fonts/prompt/prompt-v4-latin-800italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* prompt-900 - latin */
+@font-face {
+  font-family: 'Prompt';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Prompt Black'), local('Prompt-Black'),
+       url('fonts/prompt/prompt-v4-latin-900.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('fonts/prompt/prompt-v4-latin-900.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* prompt-900italic - latin */
+@font-face {
+  font-family: 'Prompt';
+  font-style: italic;
+  font-weight: 900;
+  src: local('Prompt Black Italic'), local('Prompt-BlackItalic'),
+       url('fonts/prompt/prompt-v4-latin-900italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('fonts/prompt/prompt-v4-latin-900italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}

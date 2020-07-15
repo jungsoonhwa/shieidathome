@@ -1,0 +1,1069 @@
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+
+<head>
+    <title>SHIELD@Home</title>
+    <meta content="viewport-fit=cover, width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, target-densitydpi=medium-dpi" name="viewport">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="imagetoolbar" content="no" />
+    <link rel="shortcut icon" href="imagescommon/favicon_new.ico" />
+    <link rel="stylesheet" type="text/css" href="common/css/common.css" />
+    <script type="text/javascript" src="common/js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="common/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="common/js/jquery.placeholder.js"></script>
+    <script type="text/javascript" src="common/js/_basicFunction.js"></script>
+    <script type="text/javascript" src="common/js/common.js"></script>
+    <script type="text/javascript" src="common/js/swiper.min.js"></script>
+    <!-- <script type="text/javascript" src="common/js/selectize.js"></script> -->
+
+</head>
+<script src="common/js/scrolloverflow.min.js"></script>
+<script src="common/js/jquery.fullpage.min.js"></script>
+<script>
+    $(function() {
+        $('#fpWrap').fullpage({
+            scrollOverflow: true,
+            scrollOverflowReset: true,
+            navigation: false,
+            menu: '#fp-menu',
+            anchors: ['broom', 'pay', 'manual', 'expert', 'proc', 'review'],
+            responsiveWidth: 1100,
+
+
+            afterLoad: function(anchorLink, index) {
+                if (index == 1) {
+                    $('.fp_item1').addClass('on');
+                    $('#fp-menu > li').eq(0).addClass('on');
+                    $('#header').removeClass('bgbg');
+                }
+                if (index == 2) {
+                    $('.fp_item2').addClass('on');
+                    $('#fp-menu > li').eq(1).addClass('on');
+
+                }
+                if (index == 3) {
+                    $('.fp_item3').addClass('on');
+                    $('#fp-menu > li').eq(2).addClass('on');
+                }
+                if (index == 4) {
+                    $('.fp_item4').addClass('on');
+                    $('#fp-menu > li').eq(3).addClass('on');
+                }
+                if (index == 5) {
+                    $('.fp_item5').addClass('on');
+                    $('#fp-menu > li').eq(4).addClass('on');
+                }
+                if (index == 6) {
+                    $('.fp_item6').addClass('on');
+                    $('#fp-menu > li').eq(5).addClass('on');
+                }
+                if (index > 1) {
+                    $('#header').addClass('bgbg');
+                }
+
+
+            },
+
+            onLeave: function(index, nextIndex, direction) {
+                //console.log(nextIndex);
+                $('#fp-menu > li').removeClass('on');
+                $('#fp-menu > li').eq(nextIndex - 1).addClass('on');
+
+
+                if (nextIndex == 6) {
+
+                    $('#fp-menu').removeClass('on');
+                    $('#container').removeClass('load');
+
+                } else {
+
+                    $('#fp-menu').addClass('on');
+                    $('#container').addClass('load');
+                }
+            }
+        });
+        $(window).on('load', function() {
+            $('#fp-menu').addClass('on');
+        });
+
+
+
+    });
+
+</script>
+
+<body>
+    <div id="wrap" class="main">
+        <div id="header">
+            <div class="headerTop">
+                <h1><a href="/index.php" class="logo"><img src="/imagescommon/logo.png" alt="" class="logo_white"><img src="/imagescommon/logo_color.png" alt="" class="logo_color"></a></h1>
+                <a href="" class="btn_all_menu">
+                    <span class="barTop"></span>
+                    <span class="barMid"></span>
+                    <span class="barBot"></span>
+                </a>
+
+                <div id="gnb">
+                    <ul class="gnbWrap">
+                        <li class="logo">
+                            <a href=""><img src="images/main/logo_o.png" alt="SHIELD@Home"></a>
+
+                        </li>
+
+
+                        <li class="btn_gnbBroom">
+                            <a href="">무료체험</a>
+                        </li>
+                    </ul>
+                </div>
+
+
+            </div>
+            <div class="allMenuWrap">
+                <div class="allMenuWrap_inner">
+                    <div class="allMenu_inner">
+                        <ul class="allMenu clearfix">
+                            <li class="hasDep2">
+                                <a href="#">SHIELD@Home</a>
+                                <ul class="dep2">
+                                    <li><a href="">제품문의</a></li>
+
+                                </ul>
+                            </li>
+                            <li class="hasDep2">
+                                <a href="#">고객센터</a>
+
+                            </li>
+                            <li class="hasDep2">
+
+                            </li>
+                            <a href="https://pf.kakao.com/_CKBFT" target="_blank" id="kakao" class="btn_main btn_ty1"><span>카카오톡 문의하기</span></a>
+                            <!-- 관리자 메뉴 -->
+                            <!--<li class="hasDep2">
+						<a href="#">매니저</a>
+						<ul class="dep2">
+							<li><a href="/manager/manager_index.php">Index</a></li>
+							<li><a href="/manager/calender.php">근무신청(캘린더)</a></li>
+							<li><a href="/manager/salary.php">급여</a></li>
+							<li><a href="/manager/waiting.php">접수현황(청소상세)</a></li>
+							<li><a href="/manager/complete.php">완료현황</a></li>
+							<li><a href="/manager/review.php">리뷰</a></li>
+							<li><a href="/manager/notice.php">공지사항</a></li>
+							<li><a href="/manager/faq.php">자주 묻는 질문</a></li>
+							<li><a href="/manager/manager_manual.php">매니저 메뉴얼</a></li>
+							<li><a href="/manager/feedback.php">의견수렴</a></li>
+							<li><a href="/manager/modify.php">정보수정</a></li>
+						</ul>
+					</li>  -->
+                            <!-- //관리자 메뉴 -->
+                        </ul>
+                    </div>
+                </div>
+                <div class="allMenuWrap_dim winH"></div>
+            </div>
+        </div>
+        <div class="dim"></div>
+        <div id="container">
+            <div id="fpWrap" class="fpWrap">
+                <!-- fp-menu -->
+                <ul id="fp-menu">
+                    <li><a data-menuanchor="broom" href="#broom"> <span></span></a></li>
+                    <li><a data-menuanchor="pay" href="#pay"> <span></span></a></li>
+                    <li><a data-menuanchor="manual" href="#manual"> <span></span></a></li>
+                    <li><a data-menuanchor="expert" href="#expert"> <span></span></a></li>
+                    <li><a data-menuanchor="proc" href="#proc"> <span></span></a></li>
+                    <!-- <li><a data-menuanchor="review" href="#review"> <span></span></a></li> -->
+                </ul>
+
+
+                <div id="" class="section fp_item fp_item1">
+                    <div class="mainVisual winH">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide mv01">
+                                <div class="mvTxt">
+                                    <div class="mainTit">
+                                        <strong class="tit">코로나19 로 기업은 원격 근무에 대한<br>
+                                            접근 방식을 재 평가해야합니다.(Garter)</strong>
+                                        <div class="desc">
+                                            <span>"코로나19 로 기업은 원격 근무에 대한<br>
+                                                접근 방식을 재 평가해야합니다.(Garter)"<br>
+                                                미국 시장조사업체 가트너의<br><br>
+
+                                                "Leading Through COVID-19: Panel Discussion - Remote Work Now and Beyond" 웨비나에서는<br>
+
+                                                코로나19 이후 원격 근무의 미래에 대해서 접근 방식 자체를 재평가해야하는 화두가 제시되었습니다.</span>
+                                        </div>
+                                        <div class="btn_area clearfix">
+                                            <a href="" class="btn_main btn_blue btn_broom"><span>무료체험</span></a>
+                                        </div>
+                                    </div>
+                                    <div class="mv_pagination">
+                                        <!-- Add Pagination -->
+                                        <div class="swiper-pagination"></div>
+                                        <!-- play / pause -->
+                                        <span class="swiper-button-play" style="display: none;">play</span>
+                                        <span class="swiper-button-pause">stop</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide mv02">
+                                <div class="mvTxt">
+                                    <div class="mainTit">
+                                        <strong class="tit">VPN 등 별도의 소프트웨어 설치없이<br>
+                                            웹 브라우저 원클릭으로 사무실PC가 내앞에! </strong>
+                                        <div class="desc">
+
+                                        </div>
+                                        <div class="btn_area clearfix">
+                                            <a href="" class="btn_main btn_blue btn_broom"><span>무료체험</span></a>
+                                        </div>
+                                    </div>
+                                    <div class="mv_pagination">
+                                        <!-- Add Pagination -->
+                                        <div class="swiper-pagination"></div>
+                                        <!-- play / pause -->
+                                        <span class="swiper-button-play" style="display: none;">play</span>
+                                        <span class="swiper-button-pause">stop</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide mv03">
+                                <div class="mvTxt">
+                                    <div class="mainTit">
+                                        <strong class="tit">코로나19 등 재난 상황에서 <br>
+                                            ​근무지 즉시 전환 가능 </strong>
+                                        <div class="desc">
+                                            <span>포스트 코로나에는 어떤 근무환경을 준비해야할까요? <br>
+
+                                                재난 상황을 대비해 지금 바로 재택근무를 가능하게 하는 솔루션을 찾고 계시나요?
+                                                <br>
+                                                ​소프트캠프가 그 니즈를 충족시키는 가장 안전한 솔루션을 제공합니다.</span>
+                                        </div>
+                                        <div class="btn_area clearfix">
+                                            <a href="" class="btn_main btn_blue btn_broom"><span>무료체험</span></a>
+                                        </div>
+                                    </div>
+                                    <div class="mv_pagination">
+                                        <!-- Add Pagination -->
+                                        <div class="swiper-pagination"></div>
+                                        <!-- play / pause -->
+                                        <span class="swiper-button-play" style="display: none;">play</span>
+                                        <span class="swiper-button-pause">stop</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="icon_scroll ">
+                            <img src="/images/main/icon_scrollDwn.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="" class="section fp_item fp_item2 section-contents">
+                    <div class="col2Wrap">
+                        <div class="mainTit taR">
+                            <div class="inner_tyCol2 taL">
+                                <strong class="tit tit_ty2 fc_black">웹 브라우저 하나로!</strong>
+                                <div class="desc">
+                                    <span class="fc_gray">#크롬 #사파리 #파이러폭스 #익스프로 엣지#비대면</span>
+                                </div>
+                                <div class="btn_area clearfix">
+                                    <a href="" target="_blank" class="btn_main btn_ty1 btn_bd_blue btn_plus2 "><span>적용사례 보기</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sliderWrap">
+                            <div class="paySlider">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide swiper-slide01 ">
+                                        <div class="slider01">
+                                            <div class="txt_box">
+                                                <strong>웹 브라우저 원클릭으로,
+                                                </strong>
+                                                <p>회사PC에 그대로 접속! </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide swiper-slide02">
+                                        <div class="slider02">
+                                            <div class="txt_box">
+                                                <strong>VPN 없이!<br>보안 사각지대 원천 차단! </strong>
+                                                <p>VPN 등 별도의 소프트웨어 설치가 필요없어, <br>보안 수준을 알 수 없는 PC가 내부망에<br> 접속하는 위험을 원천적으로 차단합니다. </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide swiper-slide03">
+                                        <div class="slider03">
+                                            <div class="txt_box">
+                                                <strong>은닉 스크린 마킹기능</strong>
+                                                <p>원격근무자의 근무 행위의 로그 수집, <br>분석, 리포팅으로 관리가능합니다</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Add Arrows -->
+                                <div class="swiper-button-next ff_prompt taR">NEXT </div>
+                                <div class="swiper-button-prev ff_prompt">PREV </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="" class="section fp_item fp_item3 bg_blue section-contents" style="position: relative;">
+                    <div class="col2Wrap">
+                        <div class="mainTit taR">
+                            <div class="inner_tyCol2 taL">
+                                <strong class="tit tit_ty2"><img src="images/main/logo_w.png" /></strong>
+                                <div class="desc">
+                                    <span class="fc_sky">웹 브라우저만 연결된다면 <br>눈 앞의 PC가 지금 바로 사무실PC로 전환 됩니다. </span>
+                                </div>
+                                <div class="btn_area clearfix">
+                                    <a href="#none" class="btn_main btn_ty1 btn_bd_sky btn_plus btnClean"><span>무료체험</span></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="videoArea">
+                            <div class="videoBox">
+                                <div class="videoInner">
+                                    <iframe id="player" class="video" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="video player" src="images/main/shield.mp4" autoplay></iframe>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="sliderWrap" style="display: none;">
+                            <div class="manualSlider">
+                                <div class="swiper-wrapper">
+
+                                    <!-- <div class="swiper-slide slider01">
+										<div class="txt_box">
+											<span class="ff_prompt">01</span>
+											<strong>청소준비</strong>
+											<p>공간별 걸레 구분, 배수구 분리, 환풍기 <br>분리, 전등갓 분리, 걸레받이 등</p>
+										</div>
+									</div>
+									<div class="swiper-slide slider02">
+										<div class="txt_box">
+											<span class="ff_prompt">02</span>
+											<strong>청소진행</strong>
+											<p>방, 욕실, 주방, 현관, 창틀 및 유리창 별 <br>맞춤 청소매뉴얼</p>
+										</div>
+									</div>
+									<div class="swiper-slide slider03">
+										<div class="txt_box">
+											<span class="ff_prompt">03</span>
+											<strong>입주항균서비스</strong>
+											<p>깨끗한 청소 뿐만이 아닌 <br>상큼한 향기와 함께 하세요.</p>
+										</div>
+									</div> -->
+                                </div>
+                                <!-- 스크롤바 -->
+                                <div class="swiper-scrollbar"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="" class="section fp_item fp_item4 bg_gray2 section-contents" style="position: relative;">
+                    <div class="col2Wrap">
+                        <div class="mainTit taR">
+                            <div class="inner_tyCol2 taL">
+                                <strong class="tit tit_ty2 fc_black">Why <img src="images/main/logo_o.png" style="padding-top:40px" /> ? </strong>
+                                <div class="desc">
+                                    <span class="fc_gray">#재택근무 #비대면 #언택트시대 </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sliderWrap">
+                            <div class="expertSliderWrap">
+                                <div class="expertSlider">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide slider01">
+                                            <div class="txt_box">
+                                                <strong>웹 브라우저 하나로, 지금 바로 시작합니다.</strong>
+                                                <p>별도의 소프트웨어(SW) 설치가 전혀 필요없습니다.
+                                                    웹 브라우저에 접속만 하면 언제 어디서나 눈 앞의 PC가 사무실PC로 지금 바로, 즉시 전환됩니다. </p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide slider02">
+                                            <div class="txt_box">
+                                                <strong>VPN 없이, 안전하게 지켜드립니다.</strong>
+                                                <p>VPN은 사내 네트워크에 직접 연결해주는 방식이기에 보안 수준을 알 수 없는 PC가 직접 접속되는 문제가 존재합니다. SHIELD@Home은 VPN 등 별도의 소프트웨어 설치가 필요없어 보안의 사각지대 자체를 차단했습니다. </p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide slider03">
+                                            <div class="txt_box">
+                                                <strong>관리자의 관리 편의성을 더했습니다.</strong>
+                                                <p>"내일부터 재택인데.. 그룹사 직원들까지 설정 안내를 어떻게 하지.." 환경 설정의 복잡함 자체가 없어 몇 만명의 임직원일지라도 쉽고 간단합니다. 변화없이 평시 근무환경 자체를 손쉽게 재택근무 환경으로 전환하는 최적의 솔루션 입니다. </p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide slider04">
+                                            <div class="txt_box">
+                                                <strong>사용자의 간편함을 먼저 생각합니다.</strong>
+                                                <p>사용자가 환경 설정의 구애없이 클릭 한번으로 눈앞의 PC를 사무실PC로 접속할 수 있습니다. 재택근무 신청 후 허가만 이루어지면 재택근무 준비 완료! 재택근무만을 위한 핵심적인 기능을 담았습니다. </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 스크롤바 -->
+                                    <div class="swiper-scrollbar"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="" class="section fp_item fp_item5 section-contents">
+                    <div class="inner">
+                        <div class="mainTit taC" style="margin-top: 80px">
+                            <strong class="tit tit_ty2 fc_black">이용안내 </strong>
+                            <div class="desc">
+                                <span class="fc_gray">합리적인 가격으로 재택근무를 손쉽게 제공합니다.</span>
+                            </div>
+                        </div>
+                        <div class="procSlider">
+                            <style>
+                                .txt-button {
+                                    overflow: visible;
+                                    padding: 0;
+                                    border: none 0;
+                                    background: none;
+                                    cursor: pointer;
+                                    vertical-align: top;
+                                }
+
+                                .img-button {
+                                    overflow: visible;
+                                    padding: 0;
+                                    border: none 0;
+                                    background: none;
+                                    cursor: pointer;
+                                    vertical-align: top;
+                                    font-size: 0;
+                                    line-height: 0;
+                                }
+
+                                .img-button img {
+                                    display: block;
+                                    position: relative;
+                                }
+
+                                .bg-button {
+                                    background: none;
+                                    border: none;
+                                    cursor: pointer;
+                                    overflow: visible;
+                                    padding: 0;
+                                    vertical-align: top;
+                                }
+
+
+                                button::-moz-focus-inner {
+                                    border: 0;
+                                    padding: 0;
+                                }
+
+                                textarea {
+                                    font-size: 1em;
+                                    padding: 6px 4px;
+                                    color: #555;
+                                    border: 1px solid #cccccc;
+                                }
+
+                                /* basic */
+                                .hidden-obj,
+                                .hd-oj {
+                                    position: absolute;
+                                    visibility: hidden;
+                                    top: -9000px;
+                                    left: -9000px;
+                                }
+
+                                .display-none {
+                                    display: none;
+                                }
+
+
+
+                                .bt-3 {
+                                    border-top: 3px solid #48484a !important;
+                                }
+
+                                .mb-10 {
+                                    margin-bottom: 10px;
+                                }
+
+
+                                .taC {
+                                    text-align: center
+                                }
+
+                                /* option */
+                                .bt-none {
+                                    border-top: none !important;
+                                }
+
+                                .sect3 {
+                                    width: 960px;
+                                    margin: auto
+                                }
+
+                                .wrap_tbl {
+                                    position: relative
+                                }
+
+                                .wrap_tbl .tag_promo {
+                                    position: absolute;
+                                    right: 0;
+                                    top: 0px;
+                                    width: 80px;
+                                    height: 22px;
+                                    background-color: #6FDEFF;
+                                    color: #222;
+                                    line-height: 22px;
+                                    font-weight: bold;
+                                    font-size: 14px;
+                                    text-align: center;
+                                }
+
+                                .sect3 table {
+                                    font-size: 14px;
+                                    width: 100%;
+                                    margin-top: 20px;
+                                }
+
+                                .sect3 table th {
+                                    background-color: #18191A;
+                                    color: #fff;
+                                    height: 80px;
+                                    border: 1px solid #3E3E3E
+                                }
+
+                                .sect3 table td {
+                                    border: 1px solid #EBEBEB;
+                                    padding: 10px 0 10px 0;
+                                    font-weight: bold;
+                                    color: #3E3E3E;
+                                    text-align: center;
+
+                                }
+
+                                .sect3 table .th {
+                                    background-color: #F6F6FA
+                                }
+
+                                .sect3 table .ex {
+                                    display: block;
+                                    font-size: 12px;
+                                    color: #8E8E8E
+                                }
+
+                                .sect3 table .emph {
+                                    font-size: 24px
+                                }
+
+                                .sect3 table .emph2 {
+                                    color: #6FDEFF
+                                }
+
+                                .sect3 table tr:hover td {
+                                    color: #6FDEFF
+                                }
+
+                                .sect3 table tr:hover .th {
+                                    color: #3E3E3E
+                                }
+
+                                .sect3 table .txt_x {
+                                    color: #CCC
+                                }
+
+                            </style>
+                            <div class="sect3">
+                                <div class="wrap_tbl">
+                                    <span class="tag_promo">Promotion</span>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th colspan="2">구분</th>
+                                                <th><span class="emph">무료체험</span></th>
+                                                <th class="emph2"><span class="emph">유료</span></th>
+                                                <th class="emph2"><span class="emph">구축형</span></th>
+                                            </tr>
+
+                                        </thead>
+                                        <tbody>
+
+                                            <tr>
+                                                <td colspan="2" class="th"> </td>
+                                                <td class="taC">지금 바로 <br>
+                                                    무료로 시작해보세요! <br>
+                                                    <br>
+                                                    <br><br>
+                                                    <br>
+                                                </td>
+                                                <td class="taC">전용 클라우드 가상환경서버 제공
+                                                    <br><br>
+                                                    편리한 관리모드의 기능까지 <br>
+                                                    손쉽고 다양하게 제공되며<br>
+                                                    사용량에 ​=따른 유연한<br>
+                                                    과금정책 제공<br>
+                                                    <br>
+                                                    <br>
+                                                    <br>
+                                                    재택근무 사용자 1인당<br>
+                                                    사용량에 따른 과금정책 <br>
+                                                    <br>
+                                                    <br><br>
+                                                    <br>
+                                                </td>
+
+                                                <td class="taC">별도 서버 구축이 필요하신가요?
+                                                    <br>
+                                                    SHIELD@Home<br>
+                                                    구축형을 이용해 보세요.<br> <br>
+                                                    <br>
+                                                    <br><br>
+                                                    <br>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="5" class="th tac">라이선스 안내</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2" class="th">구매 가능한 라이선스 수 </td>
+                                                <td colspan="3" class="tac">제한없음</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2" class="th">제어 가능한 기기 수 </td>
+                                                <td colspan="3" class="tac">제한없음</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2" class="th">라이선스 사용 범위</td>
+                                                <td colspan="3" class="tac">개인/기업에서 사용가능</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="5" class="th tac">디바이스 원격 제어</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2" class="th">PC to PC 제어</td>
+                                                <td>O</td>
+                                                <td>O</td>
+                                                <td>O</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2" class="th">Mobile to PC 제어 </td>
+                                                <td>O</td>
+                                                <td>O</td>
+                                                <td>O</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="5" class="th tac">재택근무 포털 사이트 제공</td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="3" class="th">외부접속 포털 <span class="ex">(인터넷 환경)</span></td>
+                                                <td class="th">로그인</td>
+                                                <td>O</td>
+                                                <td>O</td>
+                                                <td>O</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="th">재택근무 안내</td>
+                                                <td>O</td>
+                                                <td>O</td>
+                                                <td>O</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="th">전용 도메인 연결</td>
+                                                <td>-</td>
+                                                <td>O</td>
+                                                <td>O</td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="3" class="th">내부접속 포털 <span class="ex">(내부망 환경)</span></td>
+                                                <td class="th">근무자 정보 입력</td>
+                                                <td>-</td>
+                                                <td>O</td>
+                                                <td>O</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="th">재택근무 안내 공지 </td>
+                                                <td>-</td>
+                                                <td>O</td>
+                                                <td>O</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="th">환경 설정</td>
+                                                <td>-</td>
+                                                <td>O</td>
+                                                <td>O</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="5" class="th tac">쉽고 편리한 재택근무 관리기능 </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2" class="th">서버 시스템 현황 대시보드 </td>
+                                                <td>-</td>
+                                                <td>O</td>
+                                                <td>O</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2" class="th">재택근무 현황 대시보드 </td>
+                                                <td>-</td>
+                                                <td>O</td>
+                                                <td>O</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td colspan="2" class="th">재택근무 승인/취소/기간 설정 </td>
+                                                <td>-</td>
+                                                <td>O</td>
+                                                <td>O</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td colspan="2" class="th">사용자 관리 </td>
+                                                <td>-</td>
+                                                <td>O</td>
+                                                <td>O</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td colspan="2" class="th">근무 내역 관리</td>
+                                                <td>-</td>
+                                                <td>O</td>
+                                                <td>O</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td colspan="2" class="th">사용자 정보 수집</td>
+                                                <td>-</td>
+                                                <td>O</td>
+                                                <td>O</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td colspan="2" class="th">원격접속 환경 설정</td>
+                                                <td>-</td>
+                                                <td>O</td>
+                                                <td>O</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="5" class="th tac">보안기능 </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2" class="th">은닉 스크린 마킹 </td>
+                                                <td>-</td>
+                                                <td>O</td>
+                                                <td>O</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2" class="th">프로세스 실행, 웹 접속 URL 로그 기록 </td>
+                                                <td>-</td>
+                                                <td>O</td>
+                                                <td>O</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div id="" class="section fp_item fp_item6 bg_navy section-contents">
+                    <div class="inner">
+                        <div class="mainTit taC">
+                            <strong class="tit tit_ty2">Shield@home</strong>
+                            <div class="desc">
+                                <span class="fc_sky2">고객이 만족을 할 때 부름의 청소는 완료됩니다. <br>다양한 후기로 부름의 서비스를 확인하세요.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="btn_area clearfix">
+                        <a href="#none" class="btn_main btn_ty1 btn_plus btnClean"><span>더 보기</span></a>
+                    </div>
+                </div>
+                <!-- footer -->
+                <div class="section fp-auto-height section_footer">
+                    <div id="footer">
+                        <div class="footer_inner">
+                            <div class="footerTop clearfix">
+                                <ul class="btn_list">
+                                    <li><a href="">서비스이용약관</a></li>
+                                    <li><a href="">개인정보처리방침</a></li>
+                                    <li><a href="">고객센터</a></li>
+                                </ul>
+
+                            </div>
+                            <div class="footerCont">
+                                <ul>
+                                    <li>경기도 성남시 분당구 판교로 228번길 17<br>
+                                        ​판교세븐벤처벨리2 이랜텍동 3층(삼평동 633)</li>
+
+                                </ul>
+                                <ul>
+
+                                    <li>전화 : 82-31-697-4501</li>
+                                    <li>이메일 : info@softcamp.co.kr</li>
+                                </ul>
+                            </div>
+                            <div class="sns_list">
+                                <a href=""><span class="img_box"><img src="images/common/icon_google.png" alt=""></span></a>
+                                <a href=""><span class="img_box"><img src="images/common/icon_app_store.png" alt=""></span></a>
+                                <a href="https://www.instagram.com/clean.broom/" target="_blank"><span class="img_box"><img src="images/common/icon_insta.png" alt=""></span></a>
+                                <!-- <a href=""><span class="img_box"><img src="/imagescommon/icon_face.png" alt=""></span></a>
+			<a href=""><span class="img_box"><img src="/imagescommon/icon_twitter.png" alt=""></span></a> -->
+                            </div>
+                            <p class="copy"> © 2020 SOFTCAMP All Rights Reserved</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <script>
+        $(function() {
+            $(window).one('resize', function() {
+
+            });
+
+            /* mv-slider */
+            var swiperMv = new Swiper('.mainVisual', {
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+                loop: true,
+                effect: 'fade',
+                pagination: {
+                    el: '.mainVisual .swiper-pagination',
+                    clickable: true
+                },
+            });
+            $(".swiper-button-pause").click(function() {
+                swiperMv.autoplay.stop();
+                $(".swiper-button-pause").hide();
+                $(".swiper-button-play").show();
+            });
+            $(".swiper-button-play").click(function() {
+                swiperMv.autoplay.start();
+                $(".swiper-button-play").hide();
+                $(".swiper-button-pause").show();
+            });
+
+            /* pay-silder */
+            var swiperPay = new Swiper('.paySlider', {
+                slidesPerView: 1,
+                spaceBetween: 0,
+                loop: true,
+                navigation: {
+                    nextEl: '.paySlider .swiper-button-next',
+                    prevEl: '.paySlider .swiper-button-prev',
+                },
+                breakpoints: {
+                    460: {
+                        slidesPerView: 1,
+                        spaceBetween: 70,
+                    },
+                    1200: {
+                        slidesPerView: 2,
+                        spaceBetween: 50,
+                    },
+                    2200: {
+                        slidesPerView: 3,
+                        spaceBetween: 50,
+                    }
+
+                }
+            });
+
+            /* manual-silder */
+            var swiperManual = new Swiper('.manualSlider', {
+                direction: 'horizontal',
+                slidesPerView: 'auto',
+                spaceBetween: 30,
+                simulateTouch: false,
+                onlyExternal: true,
+                scrollbar: {
+                    el: '.manualSlider .swiper-scrollbar',
+                    draggable: true,
+                },
+                breakpoints: {
+                    767: {
+                        direction: 'vertical',
+                        spaceBetween: 40,
+                        slidesPerView: 'auto',
+                        simulateTouch: true,
+                        onlyExternal: true,
+                    }
+                }
+            });
+
+            /* expert-silder */
+            var swiperExpert = new Swiper('.expertSlider', {
+                direction: 'horizontal',
+                centeredSlides: true,
+                slidesPerView: 1,
+                spaceBetween: 20,
+                //	loop:true,
+                scrollbar: {
+                    el: '.expertSlider .swiper-scrollbar',
+                    draggable: true,
+                },
+                breakpoints: {
+                    1100: {
+                        spaceBetween: 40,
+                        direction: 'vertical',
+                    }
+                }
+            });
+
+            /* .proc-silder */
+            var swiperProc = new Swiper('.procSlider', {
+                slidesPerView: 1,
+                simulateTouch: true,
+                spaceBetween: 30,
+                scrollbar: {
+                    el: '.procSlider .swiper-scrollbar',
+                    draggable: true,
+                },
+                breakpoints: {
+                    767: {
+                        slidesPerView: 3,
+                    },
+                    1100: {
+                        slidesPerView: 4,
+                    }
+                }
+
+            });
+
+            /* review-silder */
+            var swiperReview = new Swiper('.reviewSlider', {
+                slidesPerView: 1,
+                //centeredSlides: true,
+                //	loop:true,
+                //	freeMode: true,
+                spaceBetween: 40,
+                scrollbar: {
+                    el: '.reviewSlider .swiper-scrollbar',
+                    draggable: true,
+                },
+                navigation: {
+                    nextEl: '.reviewSlider .swiper-button-next',
+                    prevEl: '.reviewSlider .swiper-button-prev',
+                },
+                breakpoints: {
+                    850: {
+                        slidesPerView: 2,
+                        spaceBetween: 30,
+                    },
+                    1200: {
+                        slidesPerView: 3,
+                        spaceBetween: 60,
+                    }
+                }
+            });
+
+            /*			$('.btnClean').click(function(){
+            				e.preventDefault();
+            				$('.popupWrap').show();
+            				$('.dim').show();
+            			});
+            */
+            $('.popupWrap .btn_close').click(function(e) {
+                e.preventDefault();
+                $('.popupWrap').hide();
+                $('.dim').hide();
+            });
+
+        });
+
+        function popArea() {
+            $('.popupWrap.area').show();
+            $('.dim').show();
+        }
+
+        function popRange() {
+            $('.popupWrap.range').show();
+            $('.dim').show();
+        }
+
+    </script>
+    <!-- <script type="text/javascript">
+//<![CDATA[
+
+	function openWin(flag) {
+		var target_layer_id;
+		var blnCookie;
+
+		target_layer_id	=	flag;
+		blnCookie    	= getCookie(target_layer_id);
+	   
+		if(!blnCookie) {
+			document.getElementById(target_layer_id).style.display	=	"block";
+		}
+	}
+
+	function close_popup_layer(flag) {
+		var target_layer_id;
+		if(flag >0) {
+			target_layer_id	=	"Broom_popup_"+flag;
+			//alert(target_layer_id);
+			document.getElementById(target_layer_id).style.display	=	"none";
+		}
+	}
+	
+	function close_popup_layer_today(flag) {
+		var target_layer_id;
+		//alert(target_layer_id);
+		if(flag >0) {
+			target_layer_id	=	"Broom_popup_"+flag;
+			document.getElementById(target_layer_id).style.display	=	"none";
+			setCookie(target_layer_id, "done" , 1);
+		}
+	}
+	
+	function setCookie( name, value, expiredays ) {
+	   var todayDate = new Date();
+	   todayDate.setDate( todayDate.getDate() + expiredays );
+	   document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+	}  
+	
+	function getCookie(name) {  
+	   var nameOfCookie = name + "=";  
+	   var x = 0;  
+	   while ( x <= document.cookie.length )  
+	   {  
+		   var y = (x+nameOfCookie.length);  
+		   if ( document.cookie.substring( x, y ) == nameOfCookie ) {  
+			   if ( (endOfCookie=document.cookie.indexOf( ";", y )) == -1 )  
+				   endOfCookie = document.cookie.length;  
+			   return unescape( document.cookie.substring( y, endOfCookie ) );  
+		   }  
+		   x = document.cookie.indexOf( " ", x ) + 1;  
+		   if ( x == 0 )  
+			   break;  
+	   }  
+	   return "";  
+	}
+
+//]]>
+</script>
+ -->
+</body>
+
+</html>
