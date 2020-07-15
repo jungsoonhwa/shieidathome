@@ -274,8 +274,8 @@
                                     <div class="swiper-slide swiper-slide02">
                                         <div class="slider02">
                                             <div class="txt_box">
-                                                <strong>VPN 없이!<br>보안 사각지대 원천 차단! </strong>
-                                                <p>VPN 등 별도의 소프트웨어 설치가 필요없어, <br>보안 수준을 알 수 없는 PC가 내부망에<br> 접속하는 위험을 원천적으로 차단합니다. </p>
+                                                <strong>보안 사각지대 원천 차단! </strong>
+                                                <p>VPN 등 별도의 소프트웨어 <br>설치가 필요없어, <br>보안 수준을 알 수 없는 PC가 내부망에<br> 접속하는 위험을 원천적으로 차단합니다. </p>
                                             </div>
                                         </div>
                                     </div>
@@ -288,9 +288,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- Add Arrows -->
+                                <!-- Add Arrows 
                                 <div class="swiper-button-next ff_prompt taR">NEXT </div>
-                                <div class="swiper-button-prev ff_prompt">PREV </div>
+                                <div class="swiper-button-prev ff_prompt">PREV </div>-->
                             </div>
                         </div>
                     </div>
@@ -319,15 +319,6 @@
                         </div>
 
 
-                        <div class="sliderWrap" style="display: none;">
-                            <div class="manualSlider">
-                                <div class="swiper-wrapper">
-
-                                </div>
-                                <!-- 스크롤바 -->
-                                <div class="swiper-scrollbar"></div>
-                            </div>
-                        </div>
                     </div>
                 </div>
 
@@ -378,7 +369,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div id="" class="section fp_item fp_item5 section-contents">
                     <div class="inner">
                         <div class="mainTit taC" style="margin-top: 80px">
@@ -387,7 +377,7 @@
                                 <span class="fc_gray">합리적인 가격으로 재택근무를 손쉽게 제공합니다.</span>
                             </div>
                         </div>
-                        <div class="procSlider">
+                        <div class="">
                             <style>
                                 .txt-button {
                                     overflow: visible;
@@ -740,22 +730,62 @@
                 </div>
 
 
-                <div id="" class="section fp-auto-height bg_navy section-footer">
-                    <div class="inner" style="padding: 30px 0;">
+                <div id="" class="section fp_item fp_item5 section-contents">
+                    <div class="inner">
                         <div class="mainTit taC">
-                            <strong class="tit tit_ty2"><img src="images/main/logo_w.png" /></strong>
+                            <strong class="tit tit_ty2 fc_black"><img src="images/main/logo_o.png" /></strong>
                             <div class="desc">
-                                <span class="fc_sky2">소프트캠프의 SHIELD@Home으로  <br>지금 바로 재택근무를 시작할 수 있습니다. </span>
-                            </div>
-                            <div class="desc">
-                                <a href="#none" class="btn_main btn_ty1 btn_plus btnClean"><span>브로우셔 다운로드</span></a>
+                                <span class="fc_gray">소프트캠프의 SHIELD@Home으로 <br>
+                                    지금 바로 재택근무를 시작할 수 있습니다</span>
                             </div>
                         </div>
+                        <div class="procSlider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide slider01 taC">
+                                    <dl>
+                                        <em class="ff_prompt">01</em>
+                                        <span class="icon_box"></span>
+                                        <dt>재택근무신청</dt>
+                                        <dd>재택근무를 위하여 서비스가입과<br>
+                                            환경설정이 필요합니다</dd>
+                                    </dl>
+                                </div>
+                                <div class="swiper-slide slider02 taC">
+                                    <dl>
+                                        <em class="ff_prompt">02</em>
+                                        <span class="icon_box"></span>
+                                        <dt>환경 설정</dt>
+                                        <dd>네트워크 환경 설정을 일부<br>
+                                            변경해야 합니다</dd>
+                                    </dl>
+                                </div>
+                                <div class="swiper-slide slider03 taC">
+                                    <dl>
+                                        <em class="ff_prompt">03</em>
+                                        <span class="icon_box"></span>
+                                        <dt>환경 자동 설정</dt>
+                                        <dd>원격접속할 PC의 환경을<br>
+                                            자동으로 설정합니다</dd>
+                                    </dl>
+                                </div>
+                                <div class="swiper-slide slider04 taC">
+                                    <dl>
+                                        <em class="ff_prompt">04</em>
+                                        <span class="icon_box"></span>
+                                        <dt>브라우저로 원격접속</dt>
+                                        <dd>청별도의 프로그램 설치없이<br>
+                                            브라우저로만 회사의 PC에<br>
+                                            바로 원격접속됩니다</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <!-- 스크롤바 -->
+                            <div class="swiper-scrollbar"></div>
+                        </div>
+                        <div class="btn_area clearfix">
+                            <a href="#none" class="btn_main btn_ty1 btn_bd_blue btn_plus2 btnClean"><span>브로우셔 다운</span></a>
+                        </div>
                     </div>
-
-
-
-
                 </div>
                 <!-- footer -->
                 <div class="section fp-auto-height section_footer">
@@ -818,31 +848,7 @@
                 $(".swiper-button-pause").show();
             });
 
-            /* pay-silder */
-            var swiperPay = new Swiper('.paySlider', {
-                slidesPerView: 1,
-                spaceBetween: 0,
-                loop: true,
-                navigation: {
-                    nextEl: '.paySlider .swiper-button-next',
-                    prevEl: '.paySlider .swiper-button-prev',
-                },
-                breakpoints: {
-                    460: {
-                        slidesPerView: 1,
-                        spaceBetween: 70,
-                    },
-                    1200: {
-                        slidesPerView: 2,
-                        spaceBetween: 50,
-                    },
-                    2200: {
-                        slidesPerView: 3,
-                        spaceBetween: 50,
-                    }
 
-                }
-            });
 
             /* manual-silder */
             var swiperManual = new Swiper('.manualSlider', {
