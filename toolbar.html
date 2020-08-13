@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title> SHIELD</title>
+    <meta charset="UTF-8">
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Heebo:400,700);
+
+        * {
+            margin: 0;
+            padding: 0
+        }
+
+        html {
+            font-family: sans-serif;
+            line-height: 1.15;
+            -webkit-text-size-adjust: 100%;
+            -webkit-tap-highlight-color: rgba(7, 9, 25, 0)
+        }
+
+
+        body {
+            margin: 0;
+            font-family: Heebo, sans-serif;
+            font-size: .95rem;
+            font-weight: 400;
+            color: #fff;
+            text-align: left;
+            background-color: #fff
+        }
+
+
+
+        a {
+            color: #3c44b1;
+            background-color: transparent
+        }
+
+        a,
+        a:hover {
+            text-decoration: none
+        }
+
+        a:hover {
+            color: #292e78
+        }
+
+        a:not([href]):not([tabindex]),
+        a:not([href]):not([tabindex]):focus,
+        a:not([href]):not([tabindex]):hover {
+            color: inherit;
+            text-decoration: none
+        }
+
+        a:not([href]):not([tabindex]):focus {
+            outline: 0
+        }
+
+        img {
+            border-style: none
+        }
+
+
+        button {
+            border-radius: 0
+        }
+
+        button:focus {
+            outline: 1px dotted;
+            outline: 5px auto -webkit-focus-ring-color
+        }
+
+        button,
+        input,
+        optgroup,
+        select,
+        textarea {
+            margin: 0;
+            font-family: inherit;
+            font-size: inherit;
+            line-height: inherit
+        }
+
+        button,
+        input {
+            overflow: visible
+        }
+
+        button,
+        select {
+            text-transform: none
+        }
+
+
+
+        .d-flex {
+            display: flex !important;
+        }
+
+        .align-items-center {
+            align-items: center !important;
+        }
+
+
+
+
+        .app-header {
+            height: 35px;
+            padding: 0 1rem;
+            background: hsla(0, 0%, 100%, .95);
+            box-shadow: 0 0.313rem 0.75rem rgba(7, 9, 25, .05), 0 0.126rem 0.15rem rgba(7, 9, 25, .03);
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            z-index: 10;
+        }
+
+        .tool-m {
+            margin-right: 10px;
+            width: 28px;
+            margin-top: 2px
+        }
+
+        .tool-m>img {
+            width: 100%;
+            opacity: 0.5
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0 1.66rem;
+            font-size: 12px;
+            color: #fff;
+            background: #062d4c;
+            height: 1.78rem;
+            line-height: 1.72rem !important;
+            border: none;
+            border-radius: 5px;
+            font-weight: 400;
+            box-shadow: 0 3px 2px -4px rgba(0, 0, 0, .2), 0 0 3px -4px rgba(0, 0, 0, .2);
+            transition: all .1s ease-in-out;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn:hover {
+            background: #0b538c;
+        }
+
+        .app-header h1 {
+            width: 135px;
+            margin-right: 10px;
+
+        }
+
+        .app-header h1>img {
+            width: 100%;
+            margin-top: 8px;
+        }
+
+        .search-link {
+            min-width: 50px;
+            text-align: left;
+            font-weight: 700;
+            color: #fff;
+            font-size: 13px;
+            /* background: #00000024;
+            border-radius: 15px;*/
+            height: 20px;
+            padding-left: 10px;
+            line-height: 30px;
+            margin-top: 10px;
+        }
+
+        .bar {
+            margin-top: 17px;
+            height: 15px;
+            border-left: 3px solid #fff;
+        }
+
+        .dang {
+            background: #ce0202;
+        }
+
+        .wari {
+            background: #FF9800;
+        }
+
+        .mid {
+            background: #ffc107;
+        }
+
+
+        .safe {
+            background: #8fda2b
+        }
+
+        .v-safe {
+            background: #009612;
+        }
+
+        .border-b {
+            background: #062d4c;
+            border-radius: 0 0 5px 5px;
+            padding: 0 10px 0 15px
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+    <div class="wrap">
+        <div class="app-header v-safe">
+            <!--dang/wari/mid/safe/v-safe  1단계부터 5단계-->
+            <div class="d-flex border-b">
+                <h1><img src="img/logo_w.png"></h1>
+                <div class=" bar"></div>
+                <div class="search-link">금융사이트</div>
+
+            </div>
+            <div class="d-flex align-items-center">
+
+                <div class="tool-m"><img src="img/keyboard-24px.png" alt="입력금지" /></div>
+
+                <div class="tool-m"><img src="img/down_x.png" alt="다운로드 차단" /></div>
+                <div>
+                    <button type="button" class="btn">격리해제</button>
+                </div>
+
+            </div>
+            <!---->
+        </div>
+        <div>
+            <iframe src="https://www.softcamp.co.kr" width="100%" height="auto"></iframe>
+        </div>
+
+    </div>
+
+
+
+</body>
+
+</html>
